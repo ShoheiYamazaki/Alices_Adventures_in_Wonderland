@@ -16,6 +16,30 @@ int main() {
 }
 
 
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+ 
+int main() {
+    rep(i, 3) {
+        cout << "Hello" << endl;
+        cout << "AtCoder" << endl;
+    }
+}
+
+
+#include <bits/stdc++.h>
+using namespace std;
+#define rep2(i, s, n) for (int i = (s); i < (int)(n); i++)
+
+int main() {
+    rep2(i, 2, 5) {
+        cout << "Hello rep2: " << i << endl;
+    }
+}
+
+
+
 A - Find Multiple
 #include <bits/stdc++.h>
 using namespace std;
