@@ -706,3 +706,60 @@ for i in range(n):
 t = sorted(s, reverse=True)[k - 1]
 for x in s:
   print("Yes" if x + 300 >= t else "No")
+
+
+AtCoder Beginner Contest 229
+
+A - First Grid
+
+s1 = list(input())
+s2 = list(input())
+if s1[0] == "#" and s2[1] == "#" and s1[1] == "." and s2[0] == ".":
+    print("No")
+elif s1[1] == "#" and s2[0] == "#" and s1[0] == "." and s2[1] == ".":
+    print("No")
+else:
+    print("Yes")
+
+B - Hard Calculation
+
+a,b = map(int,input().split())
+if a > b:
+    c = b
+else:
+    c = a
+listA = [int(x) for x in list(str(a))]
+listB = [int(x) for x in list(str(b))]
+listC = [int(x) for x in list(str(c))]
+listA.reverse()
+listB.reverse()
+moveUp = False
+for i in range(len(listC)):
+    addAPlusB = listA[i] + listB[i]
+    if addAPlusB >= 10:
+        moveUp = True
+if moveUp == True:
+    print("Hard")
+else:
+    print("Easy")
+
+C - Cheese
+
+MAX_N = 100
+MAX_W = 10000
+# 入力
+N, W = map(int,input().split())
+w = []
+v = []
+for i in range(N):
+    a,b = map(int,input().split())
+    v.append(a)
+    w.append(b)
+dp = [[0] * (MAX_W + 1) for _ in range(MAX_N + 1)]    # DPテーブル
+for i in range(N):
+    for j in range(W + 1):
+        k = 0
+        while k * w[i] <= j:
+            dp[i + 1][j] = max(dp[i + 1][j], dp[i][j - k * w[i]] + k * v[i])
+            k += 1
+print(dp[N][W])
