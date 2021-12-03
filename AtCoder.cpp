@@ -464,3 +464,96 @@ int main(){
   cout << ans << endl;
   return 0;
 }
+
+
+AtCoder Beginner Contest 141
+
+D - Powerful Discount Tickets
+
+#include <bits/stdc++.h>
+#define rep(i,cc,n) for(int i=cc;i<=n;++i)
+#define drep(i,cc,n) for(int i=cc;i>=n;--i)
+#define sz(s) (int)(s.size())
+#define vecprint(v) rep(i,0,v.size()-1)cout << v[i] << " ";cout << endl;
+#define mod 1000000007
+using namespace std;
+int main(){
+  int a,n,m;
+  long long ans=0;
+  priority_queue<int> q;
+  //入力を受け取る
+  cin >> n >> m;
+  rep(i,0,n-1){
+    cin >> a;
+    q.push(a);
+  }
+  //チケットを一枚ずつ使う
+  rep(i,0, m-1){
+    //qから最大値を取り出し、値を半分にしてqに戻す
+    a = q.top();
+    q.pop();
+    q.push(a/2);
+  }
+  //チケットを使い終わった後、qに残っている金額を合計する
+  rep(i,0,n-1){
+    a = q.top();
+    q.pop();
+    ans += a;
+  }
+  cout << ans << endl;
+  return 0;
+}
+
+
+AtCoder Beginner Contest 139
+
+D - ModSum
+
+#include <bits/stdc++.h>
+#define rep(i,cc,n) for(int i=cc;i<=n;++i)
+#define drep(i,cc,n) for(int i=cc;i>=n;--i)
+#define mod 1000000007
+using namespace std;
+class CompareFirst {
+  public:
+  bool operator()(pair<int,int> n1,pair<int,int> n2) {
+    return n1.first>n2.first;
+  }
+};
+int main(){
+  long long n,k,ans;
+  cin >> n;
+  n--;
+  ans = n*(n+1)/2;
+  cout << ans << endl;
+  return 0;
+}
+
+
+AtCoder Beginner Contest 139
+
+C - Cheese
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n,w;
+  cin >> n >> w;
+  vector<pair<long long,long long>> v(n);
+  for(auto &nx : v){
+    cin >> nx.first >> nx.second;
+  }
+  sort(v.begin(),v.end());
+  reverse(v.begin(),v.end());
+  long long res=0;
+  for(auto &nx : v){
+    res+=nx.first*min(w,nx.second);
+    w-=min(w,nx.second);
+  }
+  cout << res << '\n';
+  return 0;
+}
+
+
+AtCoder Beginner Contest 230
+

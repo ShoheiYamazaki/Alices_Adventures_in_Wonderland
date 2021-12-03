@@ -763,3 +763,54 @@ for i in range(N):
             dp[i + 1][j] = max(dp[i + 1][j], dp[i][j - k * w[i]] + k * v[i])
             k += 1
 print(dp[N][W])
+
+
+AtCoder Beginner Contest 230
+
+A - AtCoder Quiz 3
+
+N = int(input())
+if 10 <= N < 42:
+    print("AGC0" + str(N))
+elif N >= 42:
+    print("AGC0" + str(N + 1))
+elif N < 10:
+    print("AGC00" + str(N))
+
+B - Triple Metre
+
+T = "oxx" * 10 ** 5
+S = input()
+if S in T:
+    print("Yes")
+else:
+    print("No")
+
+C - X drawing
+
+N, A, B = map(int,input().split())
+P, Q, R, S = map(int,input().split())
+table = [[0] * N] * N #0は白、1は黒を表す
+ansTable = [[0] * (Q-P+1)] * (S-R+1)
+print(*table, sep='\n')
+#操作1
+Z = max(1-A,1-B)
+Y = min(N-A,N-B)
+for k in range(Z,Y+1):
+    table[A+k-1][B+k-1] = 1
+print(*table, sep='\n')
+#操作2
+X = max(1-A,B-N)
+W = min(N-A,B-1)
+for k in range(X,W+1):
+    table[A+k-1][B-k-1] = 1
+print(*table, sep='\n')
+#色判定
+for i in range(P,Q+1):
+    for j in range(R,S+1):
+        if table[i][j] == 1:
+            ansTable[i][j] = "#"
+        elif table[i][j] == 0:
+            ansTable[i][j] = "."
+#for a in ansTable:
+#    print(*a)
