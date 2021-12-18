@@ -557,3 +557,137 @@ int main(){
 
 AtCoder Beginner Contest 230
 
+C - X drawing
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(void) {
+	long long n, a, b;
+	long long p, q, r, s;
+	long long x, y;
+	string str = "";
+	vector<string>ans;
+	cin >> n >> a >> b;
+	cin >> p >> q >> r >> s;
+	for (long long i = 0; i < (s - r + 1); i++)str += '.';
+	for (long long i = 0; i < (q - p + 1); i++)ans.push_back(str);
+	x = max(p - a, r - b);
+	y = min(q - a, s - b);
+	for (long long i = x; i <= y; i++)ans[a + i - p][b + i - r] = '#';
+	x = max(p - a, b - s);
+	y = min(q - a, b - r);
+	for (long long i = x; i <= y; i++)ans[a + i - p][b - i - r] = '#';
+	for (long long i = 0; i < (q - p + 1); i++)cout << ans[i] << endl;
+	return 0;
+}
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(void) {
+	long long n, a, b;
+	long long p, q, r, s;
+	cin >> n >> a >> b;
+	cin >> p >> q >> r >> s;
+	for (long long i = p; i <= q; i++) {
+		for (long long j = r; j <= s; j++) {
+			if ((i - j) == (a - b))cout << '#';
+			else if ((i + j) == (a + b))cout << '#';
+			else cout << ".";
+		}
+		cout << endl;
+	}
+	return 0;
+}
+
+
+AtCoder Beginner Contest 086
+
+A - Product
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int a, b, c;
+    cin >> a >> b;
+    c = a * b;
+    if (c % 2 == 0) {
+        cout << "Even" << endl;
+    } else {
+        cout << "Odd" << endl;
+    }
+}
+
+
+AtCoder Beginner Contest 081
+
+A - Placing Marbles
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    string s;
+    int ans = 0;
+    cin >> s;
+    for (int i = 0; i < (int)s.size(); i++) {
+        if (s[i] == '1') {
+            ans += 1;
+        }
+    }
+    cout << ans << endl;
+}
+
+B - Shift only
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int N, i;
+    vector<int> A;
+    int ans = 0;
+    bool exist_odd = false;
+    cin >> N;
+    while (cin >> i) {
+        A.push_back(i);
+    }
+    while (exist_odd == false) {
+        for (int i = 0; i < N; i++) {
+            if (A[i] % 2 != 0) {
+                exist_odd = true;
+            }
+        }
+        if (exist_odd == true) break;
+        for (int i = 0; i < N; i++) {
+                A[i] = A[i] / 2;
+        }
+        ans += 1;
+    }
+    cout << ans << endl;
+}
+
+
+AtCoder Beginner Contest 087
+
+B - Coins
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int A, B, C, X;
+  cin >> A >> B >> C >> X;
+  int res = 0;
+  for (int a = 0; a <= A; ++a) {
+    for (int b = 0; b <= B; ++b) {
+      for (int c = 0; c <= C; ++c) {
+        int total = 500*a + 100*b + 50*c;
+        if (total == X) ++res;
+      }
+    }
+  }
+  cout << res << endl;
+}
+
+
+AtCoder Beginner Contest 083
+
+B - Some Sums
+
