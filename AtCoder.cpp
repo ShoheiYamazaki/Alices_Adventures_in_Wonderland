@@ -691,3 +691,145 @@ AtCoder Beginner Contest 083
 
 B - Some Sums
 
+#include <bits/stdc++.h>
+using namespace std;
+
+// 各桁の和を計算する関数
+int findSumOfDigits(int n) {
+  int sum = 0;
+  while (n > 0) { // n が 0 になるまで
+    sum += n % 10;
+    n /= 10;
+  }
+  return sum;
+}
+
+int main() {
+  int N, A, B;
+  cin >> N >> A >> B;
+  int total = 0;
+  for (int i = 1; i <= N; ++i) {
+    int sum = findSumOfDigits(i); // i の各桁の和
+    if (sum >= A && sum <= B) { //  i の各桁の和が A 以上 B 以下かどうか
+      total += i;
+    }
+  }
+  cout << total << endl;
+}
+
+
+
+AtCoder Beginner Contest 088
+
+B - Card Game for Two
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int N;
+    int a[110];  // 最大 100 個ですが余裕をもたせます
+    cin >> N;
+    for (int i = 0; i < N; ++i) cin >> a[i];
+
+    sort(a, a + N, greater<int>());  // a[0:N] を大きい順にソート
+    int Alice = 0;
+    int Bob = 0;
+    for (int i = 0; i < N; ++i) {
+        if (i % 2 == 0) { // Alice のターン
+            Alice += a[i];
+        }
+        else { // Bob のターン
+            Bob += a[i];
+        }
+    }
+    cout << Alice - Bob << endl;
+}
+
+
+AtCoder Beginner Contest 085
+
+B - Kagami Mochi
+
+// バケット法による解
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int N;
+    int d[110];
+    cin >> N;
+    for (int i = 0; i < N; ++i) cin >> d[i];
+
+    int num[110] = {0};  // バケット
+    for (int i = 0; i < N; ++i) {
+        num[d[i]]++;  // d[i] が 1 個増える
+    }
+
+    int res = 0;  // 答えを格納
+    for (int i = 1; i <= 100; ++i) {  // 1 <= d[i] <= 100 なので 1 から 100 まで探索
+        if (num[i]) {  // 0 より大きかったら
+            ++res;
+        }
+    }
+    cout << res << endl;
+}
+
+// std::set を用いた解
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int N;
+    int d[110];
+    cin >> N;
+    for (int i = 0; i < N; ++i) cin >> d[i];
+
+    set<int> values; // insert するときに重複を取り除いてくれます
+    for (int i = 0; i < N; ++i) {
+        values.insert(d[i]); // 挿入します
+    }
+
+    // set のサイズを出力します
+    cout << values.size() << endl;
+}
+
+C - Otoshidama
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int N, Y;
+    cin >> N >> Y;
+    int res10000 = -1, res5000 = -1, res1000 = -1;
+    for (int a = 0; a <= N; ++a) {  // 10000円の枚数を 0 〜 N で調べる
+        for (int b = 0; b + a <= N; ++b) {  // 5000円の枚数を 0 〜 N-a で調べる
+            int c = N - a - b;  // 1000円の枚数は決まる
+            int total = 10000*a + 5000*b + 1000*c;
+            if (total == Y) {  // 答えが見つかったら
+                res10000 = a;
+                res5000 = b;
+                res1000 = c;
+            }
+        }
+    }
+
+    // 答えを出力 (見つかっていなくても -1 -1 -1 になるので OK です)
+    cout << res10000 << " " << res5000 << " " << res1000 << endl;
+}
+
+
+AtCoder Beginner Contest 232
+
+A - QQ solver
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    string S;
+    cin >> S;
+    cout << int(S[0]) << endl;
+    cout << int(S[2]) << endl;
+    //cout << S[0] * S[2] << endl;
+}

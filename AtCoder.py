@@ -814,3 +814,67 @@ for i in range(P,Q+1):
             ansTable[i][j] = "."
 #for a in ansTable:
 #    print(*a)
+
+
+AtCoder Beginner Contest 232
+
+A - QQ solver
+
+N = input()
+print(int(N[0]) * int(N[2]))
+
+B - Caesar Cipher
+
+#a=97
+#z=122
+
+S = input()
+T = input()
+b = False
+for i in range(len(S)):
+    for j in range(0,25):
+        tmp = ord(S[i]) + j
+        S.replace('S[i]', 'chr(tmp)')
+        if S == T:
+            b = True
+            print("Yes")
+            break
+    if b == True:
+        break
+if b == False: 
+    print("No")
+
+S = input()
+T = input()
+b = False
+answer = ''
+for n in range (0,26):
+    for letter in S:
+        answer += chr(ord('a') + (ord(letter)-ord('a')+n) % 26)
+        print(answer)
+        if answer == T:
+            b = True
+            print("Yes")
+            break
+    if b == True:
+        break
+if b == False: 
+    print("No")
+
+S = input()
+T = input()
+b = False
+for KEY in range(0,26):
+    enc = ""
+    for char in list(S):
+        ASCII = ord(char)
+        num = ASCII - 97
+        num = (num + KEY) % 26
+        ASCII = num + 97
+        enc += chr(ASCII)
+    if enc == T:
+        print("Yes")
+        b = True
+        break
+if b == False: 
+    print("No")
