@@ -827,7 +827,6 @@ B - Caesar Cipher
 
 #a=97
 #z=122
-
 S = input()
 T = input()
 b = False

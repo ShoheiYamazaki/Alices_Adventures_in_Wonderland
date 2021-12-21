@@ -833,3 +833,59 @@ int main() {
     cout << int(S[2]) << endl;
     //cout << S[0] * S[2] << endl;
 }
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  char a, x, b;
+  cin >> a >> x >> b;
+  cout << (int)(a - '0') * (int)(b - '0') << '\n';
+}
+
+
+B - Caesar Cipher
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(void)
+{
+  string s, t;
+  cin >> s >> t;
+  
+  for(int k = 0; k <= 25; k++){
+    string s2 = s;
+    for(int i = 0; i < (int)s.size(); i++){
+      s2[i] = ((s2[i]-'a')+k)%26 + 'a';
+    }
+    if(s2 == t){
+      cout << "Yes" << endl;
+      return 0;
+    }
+  }
+  cout << "No" << endl;
+  
+  return 0;
+}
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(void)
+{
+  string s, t;
+  cin >> s >> t;
+  
+  int k = (t[0]-s[0]+26) % 26;
+  string s2 = s;
+  for(int i = 0; i < (int)s.size(); i++){
+    s2[i] = ((s2[i]-'a')+k)%26 + 'a';
+  }
+  if(s2 == t) cout << "Yes" << endl;
+  else cout << "No" << endl;
+  
+  return 0;
+}
