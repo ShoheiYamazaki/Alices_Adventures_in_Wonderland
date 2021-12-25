@@ -879,3 +879,53 @@ if b == False:
     print("No")
 
 
+AtCoder Beginner Contest 045
+
+C - たくさんの数式
+
+def solve(s):
+	l = len(s)
+	ans = 0
+	cnt = 0
+	for i in range(1, l+1):
+		left = s[:i]
+		right = s[i:]
+		a, b = solve(right)
+		ans += int(left) * b + a
+		cnt += b
+	return ans, cnt
+
+s = input().strip()
+ans, _ = solve(s)
+print(ans)
+
+s = input()
+n = int(s)
+r = 0
+for bit in range(2**(len(s)-1)):
+    e = s[0]
+    for i in range(len(s)-1):
+        if ((bit>>i)&1) == 1:
+            e += '+'
+        e += s[i+1]
+    r += sum(map(int, e.split('+')))
+print(r)
+
+def solve():
+    n = input()
+    ans = 0
+    for i in range(2 ** (len(n) - 1)):
+        insertcount = 0
+        count = 0
+        line = list(n)
+        j = i
+        while j > 0:
+            if j & 1 == 1:
+                line.insert(1 + count + insertcount, "+")
+                insertcount += 1
+            count += 1
+            j >>= 1
+        ans += eval("".join(line))
+    print(ans)
+if __name__=="__main__":
+    solve()

@@ -891,3 +891,30 @@ int main(void)
 }
 
 
+AtCoder Beginner Contest 045
+
+C - たくさんの数式
+
+#include <stdio.h>
+#include <string.h>
+int max( int a, int b ) {
+	return (a > b) ? a : b;
+}
+long long f( char s[], int x, int n ) {
+	long long sum = 0;	
+	if( x >= n ) {
+		return 0;
+	}
+	long long num = 0;
+	for( int i = x; i < n; i++ ) {
+		num = num * 10 + (s[i]  - '0');
+		sum += num * (1LL << max(0,n-i-2))+ f(s, i+1, n);
+	}
+	return sum;
+}
+int main( void ) {
+	char s[20];
+	scanf("%s", s);	
+	printf("%lld\n", f(s, 0, strlen(s)));
+	return 0;
+}
