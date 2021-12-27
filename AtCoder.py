@@ -929,3 +929,31 @@ def solve():
     print(ans)
 if __name__=="__main__":
     solve()
+
+
+AtCoder Beginner Contest 231
+
+C - Counting 2
+
+n,q = map(int,input().split())
+a = list(map(int, input().split()))
+aa = sorted(a, reverse=True)
+x = [int(input()) for i in range(q)]
+ans = [0]*q
+for i in range(q):
+    for j in range(n):
+        if aa[j] >= x[i]:
+            ans[i] += 1
+        else:
+            break
+for x in range(q):
+    print(ans[x])
+
+from bisect import bisect_left
+n, q = map(int, input().split())
+A = list(map(int, input().split()))
+A.sort()
+for _ in range(q):
+    x = int(input())
+    p = bisect_left(A, x)
+    print(n - p)

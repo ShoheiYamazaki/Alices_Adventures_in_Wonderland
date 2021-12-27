@@ -918,3 +918,88 @@ int main( void ) {
 	printf("%lld\n", f(s, 0, strlen(s)));
 	return 0;
 }
+
+
+AtCoder Beginner Contest 228
+
+A - On and Off
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int s, t, x;
+    cin >> s >> t >> x;
+    if (s < t) {
+        cout << (s <= x and x < t ? "Yes" : "No") << '\n';
+    } else {
+        cout << (x < t or s <= x ? "Yes" : "No") << '\n';
+    }
+}
+
+
+AtCoder Beginner Contest 231
+
+A - Water Pressure
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    double a; cin >> a;
+    cout << a / 100 << endl;
+}
+
+
+AtCoder Beginner Contest 085
+
+A - Already 2018
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+using int64 = long long;
+const int64 LINF = 1LL << 61;
+const int INF = 1 << 30;
+
+int main()
+{
+  string S;
+  cin >> S;
+  S[3] = '8';
+  cout << S << endl;
+}
+
+
+AtCoder Beginner Contest 212
+
+C - Min Difference
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define N 200010
+#define INF 1010000000
+#define rep(i, n) for(int i = 0; i < n; ++i)
+
+int main(void) {
+	int n, m;
+	int a[N];
+	int b[N];
+	int ans = INF;
+	cin >> n >> m;
+	rep(i, n)cin >> a[i];
+	rep(i, m)cin >> b[i];
+	sort(a, a + n);
+	sort(b, b + m);
+	int x = 0;
+	int y = 0;
+	while ((x < n) && (y < m)) {
+		ans = min(ans, abs(a[x] - b[y]));
+		if (a[x] > b[y])y++;
+		else x++;
+	}
+	cout << ans << endl;
+
+	return 0;
+}
