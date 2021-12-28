@@ -957,3 +957,60 @@ for _ in range(q):
     x = int(input())
     p = bisect_left(A, x)
     print(n - p)
+
+
+AtCoder Beginner Contest 225
+
+C - Calendar Validator
+
+n, m = map(int, input().split())
+b = [input().split() for i in range(n)]
+print("bは" + str(b))
+ans = True
+for i in range(n):
+    for j in range(1, m):
+        print("jは" + str(j))
+        print("b[i][j-1]は" + str(b[i][j-1]))
+        if int(b[i][j-1]) % 7 != j % 7:
+            ans = False
+            break
+    if ans == False:
+        break
+if ans == True:
+    print("Yes")
+elif ans == False:
+    print("No")
+
+n, m = map(int, input().split())
+B = [list(map(int, input().split())) for _ in range(n)]
+for i in range(n):
+    for j in range(m):
+        if i != 0 and B[i][j] != B[i - 1][j] + 7:
+            print("No")
+            exit()
+        if j != 0 and B[i][j] != B[i][j - 1] + 1:
+            print("No")
+            exit()
+se = set()
+for j in range(m):
+    se.add((B[0][j] - 1) // 7)
+if len(se) == 1:
+    print("Yes")
+else:
+    print("No")
+
+N,M=map(int,input().split())
+B=[list(map(int,input().split())) for i in range(N)]
+for i in range(N):
+  for j in range(M):
+    B[i][j]-=1
+x,y=B[0][0]//7,B[0][0]%7
+for i in range(N):
+  for j in range(M):
+    if y+j>=7:
+      print('No')
+      exit()
+    if B[i][j]!=(x+i)*7+y+j:
+      print('No')
+      exit()
+print('Yes')
