@@ -1026,3 +1026,13 @@ while X < Y:
     ans = ans + 1
     X = X + 10
 print(ans)
+
+B - A Reverse
+
+L,R = map(int,input().split())
+L = L -1
+S = input()
+SS = S[L:R]
+ans = SS[::-1]
+SSS = S[:L] + ans + S[R:]
+print(SSS)
