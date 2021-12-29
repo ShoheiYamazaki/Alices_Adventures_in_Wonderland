@@ -1014,3 +1014,15 @@ for i in range(N):
       print('No')
       exit()
 print('Yes')
+
+
+AtCoder Beginner Contest 233
+
+A - 10yen Stamp
+
+X,Y = map(int,input().split())
+ans = 0
+while X < Y:
+    ans = ans + 1
+    X = X + 10
+print(ans)
