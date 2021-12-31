@@ -1036,3 +1036,27 @@ SS = S[L:R]
 ans = SS[::-1]
 SSS = S[:L] + ans + S[R:]
 print(SSS)
+
+AtCoder Beginner Contest 216
+
+A - Signed Difficulty
+
+import math
+a = float(input())
+b = math.floor(a)
+c = a - b
+d = a - c
+if 0.0 <= c and c <= 0.2:
+    print(str(int(d)) + "-")
+elif 0.3 <= c and c <= 0.6:
+    print(str(int(d)))
+elif 0.7 <= c and c <= 0.9:
+    print(str(int(d)) + "+")
+
+x, y = map(int, input().split("."))
+if 0 <= y <= 2:
+    print(str(x) + "-")
+elif 3 <= y <= 6:
+    print(str(x))
+elif 7 <= y <= 9:
+    print(str(x) + "+")
