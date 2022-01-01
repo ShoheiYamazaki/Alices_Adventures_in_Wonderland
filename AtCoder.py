@@ -1060,3 +1060,16 @@ elif 3 <= y <= 6:
     print(str(x))
 elif 7 <= y <= 9:
     print(str(x) + "+")
+
+AtCoder Beginner Contest 208
+
+B - Factorial Yen Coin
+
+import math
+P = int(input())
+ans = 0
+for i in range(10,0,-1):
+    while P >= math.factorial(i):
+        P -= math.factorial(i)
+        ans += 1
+print(ans)
