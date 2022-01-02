@@ -1073,3 +1073,13 @@ for i in range(10,0,-1):
         P -= math.factorial(i)
         ans += 1
 print(ans)
+
+AtCoder Beginner Contest 231
+
+B - Election
+
+import collections
+N = int(input())
+S = [input() for i in range(N)]
+SS = collections.Counter(S)
+print(SS.most_common()[0][0])
