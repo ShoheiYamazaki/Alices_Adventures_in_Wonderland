@@ -1083,3 +1083,15 @@ N = int(input())
 S = [input() for i in range(N)]
 SS = collections.Counter(S)
 print(SS.most_common()[0][0])
+
+
+AtCoder Beginner Contest 225
+
+A - Distinct Strings
+
+from itertools import permutations
+S = input()
+st = set()
+for i in permutations(S):
+    st.add("".join(i))
+print(len(st))
