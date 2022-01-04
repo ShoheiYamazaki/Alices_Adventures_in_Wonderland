@@ -1172,3 +1172,29 @@ AtCoder Beginner Contest 223
 
 A - Exact Price
 
+X = int(input())
+if X == 0:
+    print("No")
+elif X % 100 == 0:
+    print("Yes")
+else:
+    print("No")
+
+
+AtCoder Beginner Contest 220
+
+B - Base K
+
+K = int(input())
+A, B = input().split()
+AA = int(A, K)
+BB = int(B, K)
+print(AA * BB)
+
+
+AtCoder Beginner Contest 226
+
+A - Round decimals
+
+X = float(input())
+print(round(X+0.0005))
