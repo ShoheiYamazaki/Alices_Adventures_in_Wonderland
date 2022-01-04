@@ -1003,3 +1003,28 @@ int main(void) {
 
 	return 0;
 }
+
+
+AtCoder Beginner Contest 213
+
+B - Takahashis Secret
+
+#include <bits/stdc++.h>
+using namespace std;
+int N, X;
+int a[100001];
+bool b[100001];
+int main(void) {
+  cin >> N >> X;
+  for (int i = 1; i <= N; i++) cin >> a[i];
+  int i = X;
+  do {
+    b[i] = true;
+    i = a[i];
+  } while (!b[i]);
+  int ans = 0;
+  for (int i = 1; i <= N; i++) if (b[i]) ans++;
+  cout << ans << endl;
+}
+
+

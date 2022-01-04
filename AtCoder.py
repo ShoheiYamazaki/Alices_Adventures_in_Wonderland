@@ -1095,3 +1095,80 @@ st = set()
 for i in permutations(S):
     st.add("".join(i))
 print(len(st))
+
+
+AtCoder Beginner Contest 213
+
+A - Bitwise Exclusive Or
+
+A,B = map(int,input().split())
+print(A ^ B)
+
+
+AtCoder Beginner Contest 213
+
+B - Takahashi's Secret
+
+N,X = map(int,input().split())
+A = list(map(int, input().split()))
+num = 0
+A[X] = 
+
+
+AtCoder Beginner Contest 213
+
+B - Booby Prize
+
+N = int(input())
+A = list(map(int, input().split()))
+AA = sorted(A, reverse=True)
+AAA = AA[1]
+print(A.index(AAA) + 1)
+
+
+AtCoder Beginner Contest 224
+
+A - Tires
+
+S = input()
+if "er" in S:
+    print("er")
+elif "ist" in S:
+    print("ist")
+
+S = input()
+if S[len(S)-1] == "r":
+    print("er")
+elif S[len(S)-1] == "t":
+    print("ist")
+
+
+AtCoder Beginner Contest 216
+
+B - Same Name
+
+N = int(input())
+ST = [list(input().split()) for i in range(N)]
+for i in range(0, N):
+    for j in range (i+1, N): 
+        if ST[i] == ST[j]:
+            print("Yes")
+            exit()
+    else:
+        print("No")
+        exit()
+
+n = int(input())
+st = [list(input().split()) for _ in range(n)]
+for i in range(n):
+    for j in range(i + 1, n):
+        if st[i] == st[j]:
+            print("Yes")
+            exit()
+print("No")
+
+
+AtCoder Beginner Contest 223
+
+A - Exact Price
+
