@@ -1198,3 +1198,11 @@ A - Round decimals
 
 X = float(input())
 print(round(X+0.0005))
+
+
+AtCoder Beginner Contest 205
+
+A - kcal
+
+A,B = map(int,input().split())
+print(A * (B / 100))
