@@ -1206,3 +1206,14 @@ A - kcal
 
 A,B = map(int,input().split())
 print(A * (B / 100))
+
+
+AtCoder Beginner Contest 204
+
+A - Rock-paper-scissors
+
+x,y = map(int,input().split())
+if x == y:
+    print(x)
+else:
+    print(3-x-y)
