@@ -1217,3 +1217,6 @@ if x == y:
     print(x)
 else:
     print(3-x-y)
+
+
+a,b,c = map(int,input().split())
