@@ -1219,4 +1219,42 @@ else:
     print(3-x-y)
 
 
+AtCoder Beginner Contest 203
+
+A - Chinchirorin
+
 a,b,c = map(int,input().split())
+if a == b:
+    print(c)
+elif a == c:
+    print(b)
+elif b == c:
+    print(a)
+elif a != b != c:
+    print(0)
+
+
+AtCoder Beginner Contest 234
+
+A - Weird Function
+
+t = int(input())
+def f(t):
+    return t**2 + 2*t + 3
+print(f(f(f(t)+t)+f(f(t))))
+
+B - Longest Segment
+
+import math
+N = int(input())
+xy = [list(input().split()) for i in range(N)]
+ans = 0
+for i in range(0,N):
+    for j in range(i+1,N):
+        tmp = math.sqrt((int(xy[i][0])-int(xy[j][0]))**2 + (int(xy[i][1])-int(xy[j][1]))**2)
+        if tmp >= ans:
+            ans = tmp
+print(ans)
+
+C - Happy New Year!
+
