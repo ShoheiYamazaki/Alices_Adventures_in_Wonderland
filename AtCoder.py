@@ -1258,3 +1258,9 @@ print(ans)
 
 C - Happy New Year!
 
+k = int(input())
+x = list(bin(k)[2:])
+for i in range(len(x)):
+    if x[i] == "1":
+        x[i] = "2"
+print("".join(x))
