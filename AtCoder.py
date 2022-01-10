@@ -1264,3 +1264,19 @@ for i in range(len(x)):
     if x[i] == "1":
         x[i] = "2"
 print("".join(x))
+
+
+AtCoder Beginner Contest 205
+
+B - Permutation Check
+
+N = int(input())
+A = list(map(int, input().split()))
+A.sort()
+B = []
+for i in range(1,N+1):
+    B.append(i)
+if A == B:
+    print("Yes")
+else:
+    print("No")
