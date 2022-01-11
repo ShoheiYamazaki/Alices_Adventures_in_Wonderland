@@ -1040,3 +1040,47 @@ int main() {
     if(ans == 0) ans = n;
     cout << ans << endl;
 }
+
+
+AtCoder Beginner Contest 204
+
+B - Nuts
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int N;
+    cin >> N;
+    int a[N];
+    int ans = 0;
+    for (int i = 1; i <= N; i++) {
+        cin >> a[i];
+    }
+    for (int i = 1; i <= N; i++) {
+        if (a[i] >= 11) {
+            ans += a[i] - 10;
+        }
+    }
+    cout << ans << endl;
+}
+
+
+AtCoder Beginner Contest 203
+
+B - AtCoder Condominium
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int N, K;
+    cin >> N >> K;
+    int ans = 0;
+    for (int i = 1; i <= N; i++) {
+        for (int j = 1; j <= K; j++) {
+            ans += stoi(to_string(i) + "0" + to_string(j));
+        }
+    }
+    cout << ans << endl;
+}
+
+
