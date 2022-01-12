@@ -1084,3 +1084,19 @@ int main() {
 }
 
 
+AtCoder Beginner Contest 202
+
+A - Three Dice
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+    int aa, bb, cc;
+    aa = 7 - a;
+    bb = 7 - b;
+    cc = 7 - c;
+    int ans = aa + bb + cc;
+    cout << ans << endl;
+}
