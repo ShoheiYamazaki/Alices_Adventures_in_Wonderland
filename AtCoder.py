@@ -1294,3 +1294,13 @@ elif A[1] - A[0] == A[2] - A[1]:
     print("Yes")
 else:
     print("No")
+
+
+AtCoder Beginner Contest 201
+
+A - Century
+
+N = int(input())
+N -= 1
+ans = N//100
+print(ans+1)
