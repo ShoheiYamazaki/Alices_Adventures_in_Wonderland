@@ -1304,3 +1304,72 @@ N = int(input())
 N -= 1
 ans = N//100
 print(ans+1)
+
+
+AtCoder Beginner Contest 235
+
+A - Rotate
+
+abc = input()
+bca=abc
+bca[0]=abc[1]
+bca[1]=abc[2]
+bca[2]=abc[0]
+cab=abc
+cab[0]=abc[2]
+cab[1]=abc[0]
+cab[2]=abc[1]
+print(int(abc)+int(bca)+int(cab))
+
+abc = input()
+bca = abc.replace('abc', 'bca')
+cab = abc.replace('abc', 'cba')
+print(int(abc)+int(bca)+int(cab))
+
+abc = input().split()
+print(abc[1])
+
+abc = list(input())
+bca = [abc[1],abc[2],abc[0]]
+print(bca)
+cab = [abc[2],abc[0],abc[1]]
+ans = [int(x) + int(y) + int(z) for (x,y,z) in zip(abc,bca,cab)]
+print(ans)
+print(str(ans[0])+str(ans[1])+str(ans[2]))
+
+abc = list(input())
+bca = [abc[1],abc[2],abc[0]]
+cab = [abc[2],abc[0],abc[1]]
+abc1 = str(abc[0])+str(abc[1])+str(abc[2])
+bca1 = str(bca[0])+str(bca[1])+str(bca[2])
+cab1 = str(cab[0])+str(cab[1])+str(cab[2])
+ans = int(abc1)+int(bca1)+int(cab1)
+print(ans)
+
+B - Climbing Takahashi
+
+N = int(input())
+H = list(input().split())
+ans = 0
+for i in range (N):
+    if int(ans) < int(H[i]):
+        ans = H[i]
+    else:
+        break
+print(ans)
+
+C - The Kth Time Query
+
+N,Q = map(int,input().split())
+a = list(map(int, input().split()))
+xk = [list(input().split()) for i in range(Q)]
+for i in range(Q):
+    ans = 0
+    for j in range(N):
+        if int(xk[i][0]) == int(a[j]):
+            ans += 1
+            if int(ans) == int(xk[i][1]):
+                print(j+1)
+                break
+    if int(ans) == 0:
+        print(-1)
