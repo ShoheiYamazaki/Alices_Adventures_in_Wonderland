@@ -1386,3 +1386,17 @@ for _ in range(Q):
     print(m[x][k - 1])
   else:
     print(-1)
+
+
+AtCoder Beginner Contest 199
+
+A - Square Inequality
+
+A, B, C = map(int, input().split())
+sqerA = A**2
+sqerB = B**2
+sqerC = C**2
+if sqerA+sqerB < sqerC:
+    print("Yes")
+else:
+    print("No")
