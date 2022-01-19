@@ -1400,3 +1400,11 @@ if sqerA+sqerB < sqerC:
     print("Yes")
 else:
     print("No")
+
+
+AtCoder Beginner Contest 198
+
+A - Div
+
+N = int(input())
+print(N-1)
