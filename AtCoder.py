@@ -1408,3 +1408,11 @@ A - Div
 
 N = int(input())
 print(N-1)
+
+
+AtCoder Beginner Contest 197
+
+A - Rotate
+
+S = input()
+print(S[1:]+S[0])
