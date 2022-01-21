@@ -1416,3 +1416,14 @@ A - Rotate
 
 S = input()
 print(S[1:]+S[0])
+
+
+AtCoder Beginner Contest 195
+
+A - Health M Death
+
+M, H = map(int, input().split())
+if H%M==0:
+    print("Yes")
+else:
+    print("No")
