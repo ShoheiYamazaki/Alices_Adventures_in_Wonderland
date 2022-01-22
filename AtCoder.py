@@ -1427,3 +1427,12 @@ if H%M==0:
     print("Yes")
 else:
     print("No")
+
+
+AtCoder Beginner Contest 195
+
+A - Difference Max
+
+a, b = map(int, input().split())
+c, d = map(int, input().split())
+print(b-c)
