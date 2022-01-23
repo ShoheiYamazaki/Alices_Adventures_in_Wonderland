@@ -1436,3 +1436,63 @@ A - Difference Max
 a, b = map(int, input().split())
 c, d = map(int, input().split())
 print(b-c)
+
+
+AtCoder Beginner Contest 236
+
+A - chukodai
+
+S = input()
+a, b = map(int, input().split())
+tmp1 = S[3]
+tmp2 = S[5]
+S[3] = tmp1
+S[5] = tmp2
+print(S)
+
+S = list(input())
+a, b = map(int, input().split())
+tmp1 = S[a-1]
+tmp2 = S[b-1]
+S[a-1] = tmp2
+S[b-1] = tmp1
+StrS = "".join(S)
+print(StrS)
+
+B - Who is missing?
+
+import collections
+N = int(input())
+A = list(map(int, input().split()))
+C = collections.Counter(A)
+for i in range(1,N+1):
+    if C[i] != 4:
+        print(i)
+
+
+C - Route Map
+
+N, M = map(int, input().split())
+S = list(input().split())
+T = list(input().split())
+for i in range (len(S)):
+    eki = False
+    for j in range (len(T)):
+        if S[i] == T[j]:
+            print("Yes")
+            eki = True
+            break
+    if eki == False:
+        print("No")
+
+N, M = map(int, input().split())
+S = list(input().split())
+T = list(input().split())
+for i in range (len(S)):
+    eki = False
+    for j in range (len(T)):
+        if T[j] in S[i]:
+            print("Yes")
+            eki = True
+    if eki == False:
+        print("No")
