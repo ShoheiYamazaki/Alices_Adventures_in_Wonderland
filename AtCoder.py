@@ -1502,3 +1502,11 @@ s = input().split()
 t = set(input().split())
 for x in s:
     print("Yes" if x in t else "No")
+
+
+AtCoder Beginner Contest 196
+
+B - Round Down
+
+N = float(input())
+print(math.floor(N))
