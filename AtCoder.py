@@ -1508,5 +1508,15 @@ AtCoder Beginner Contest 196
 
 B - Round Down
 
+import math
 N = float(input())
 print(math.floor(N))
+
+print(input().split(".")[0])
+
+
+AtCoder Beginner Contest 192
+
+A - Star
+
+X = int(input())
