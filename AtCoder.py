@@ -1520,3 +1520,16 @@ AtCoder Beginner Contest 192
 A - Star
 
 X = int(input())
+XX = X % 100
+print(100-XX)
+
+
+AtCoder Beginner Contest 189
+
+A - Slot
+
+c = input()
+if c[0]==c[1]==c[2]:
+    print("Won")
+else:
+    print("Lost")
