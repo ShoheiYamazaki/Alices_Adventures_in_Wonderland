@@ -1533,3 +1533,11 @@ if c[0]==c[1]==c[2]:
     print("Won")
 else:
     print("Lost")
+
+
+AtCoder Beginner Contest 193
+
+A - Discount
+
+A, B = map(int, input().split())
+print(100*(1-A/B))
