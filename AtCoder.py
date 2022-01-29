@@ -1540,4 +1540,12 @@ AtCoder Beginner Contest 193
 A - Discount
 
 A, B = map(int, input().split())
-print(100*(1-A/B))
+print(100*(1-B/A))
+
+
+AtCoder Beginner Contest 193
+
+A - Brick
+
+N, W = map(int, input().split())
+print(N//W)
