@@ -1549,3 +1549,50 @@ A - Brick
 
 N, W = map(int, input().split())
 print(N//W)
+
+
+AtCoder Beginner Contest 237
+
+A - Not Overflow
+
+N = int(input())
+if N >= -2**31 and N < 2**31:
+    print("Yes")
+else:
+    print("No")
+
+B - Matrix Transposition
+
+import numpy as np
+H, W = map(int, input().split())
+A = [input().split() for i in range(H)]
+matrix_A = np.array(A)
+tA = matrix_A.T
+for i in tA:
+    print(*i)
+
+C - kasaka
+
+S = input()
+N = len(S)
+tmp = True
+for i in range(N):
+    if S[i] != S[N+1-i]:
+        tmp = False
+        break
+if tmp == True:
+    print("Yes")
+else:
+    print("No")
+
+D - LR insertion
+
+A = [0]
+N = int(input())
+S = input()
+for i in range(1,N+1):
+    if S[i-1] == "L":
+        A[i-1:i-1] = [i]
+    elif S[i-1] == "R":
+        A[i:i] = [i]
+print(A)
