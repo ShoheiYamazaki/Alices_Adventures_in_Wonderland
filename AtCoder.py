@@ -1596,3 +1596,14 @@ for i in range(1,N+1):
     elif S[i-1] == "R":
         A[i:i] = [i]
 print(A)
+
+
+AtCoder Beginner Contest 183
+
+A - ReLU
+
+x = int(input())
+if x >= 0:
+    print(x)
+else:
+    print(0) 
