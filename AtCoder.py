@@ -1606,4 +1606,15 @@ x = int(input())
 if x >= 0:
     print(x)
 else:
-    print(0) 
+    print(0)
+
+
+AtCoder Beginner Contest 188
+
+A - Three-Point Shot
+
+X, Y = map(int, input().split())
+if abs(X-Y) < 3:
+    print("Yes")
+else:
+    print("No")
