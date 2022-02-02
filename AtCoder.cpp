@@ -1100,3 +1100,28 @@ int main() {
     int ans = aa + bb + cc;
     cout << ans << endl;
 }
+
+
+AtCoder Beginner Contest 237
+
+C - kasaka
+
+//回文はカーソルlrで解く
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+int main() {
+    string s;
+    cin >> s;
+    int n = s.size();
+    int l = 0, r = n-1;
+    while (l < r && s[l] == 'a' && s[r] == 'a') {
+        ++l; --r;
+    }
+    while (l < r && s[r] == 'a') --r;
+    while (l < r && s[l] == s[r]) {
+        ++l; --r;
+    }
+    if (l >= r) cout << "Yes" << endl;
+    else cout << "No" << endl;
+}
