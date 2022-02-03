@@ -1125,3 +1125,22 @@ int main() {
     if (l >= r) cout << "Yes" << endl;
     else cout << "No" << endl;
 }
+
+D - LR insertion
+
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+int main() {
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    deque<int> ans = {n};
+    for (int i = n-1; i >= 0; --i) {
+        if(s[i] =='L') ans.push_back(i);
+        else ans.push_front(i);
+    }
+    rep(i, n+1) cout << ans[i] << ' ';
+    cout << endl;
+}
