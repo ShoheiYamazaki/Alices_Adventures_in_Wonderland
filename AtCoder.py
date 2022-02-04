@@ -1618,3 +1618,12 @@ if abs(X-Y) < 3:
     print("Yes")
 else:
     print("No")
+
+
+AtCoder Beginner Contest 184
+
+A - Determinant
+
+a, b = map(int, input().split())
+c, d = map(int, input().split())
+print(a * d - b * c)
