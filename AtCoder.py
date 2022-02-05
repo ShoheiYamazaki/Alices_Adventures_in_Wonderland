@@ -1627,3 +1627,16 @@ A - Determinant
 a, b = map(int, input().split())
 c, d = map(int, input().split())
 print(a * d - b * c)
+
+
+AtCoder Beginner Contest 238
+
+A - Exponential or Quadratic
+
+n = int(input())
+a = 1<<n
+b = n**2
+if a > b:
+    print("Yes")
+else:
+    print("No")
