@@ -1640,3 +1640,13 @@ if a > b:
     print("Yes")
 else:
     print("No")
+
+
+AtCoder Beginner Contest 187
+
+A - Large Digits
+
+A, B = input().split()
+A = int(A[0]) + int(A[1]) + int(A[2])
+B = int(B[0]) + int(B[1]) + int(B[2])
+print(max(A, B))
