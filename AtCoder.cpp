@@ -1174,3 +1174,21 @@ int main() {
     }
     cout << ans << endl;
 }
+
+
+AtCoder Beginner Contest 202
+
+B - 180°
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    string S;
+    cin >> S;
+    reverse(S.begin(), S.end());
+    for (const auto c: S) {
+        if (c == '6') cout << '9';
+        else if (c == '9') cout << '6';
+        else cout << c;
+    }
+}
