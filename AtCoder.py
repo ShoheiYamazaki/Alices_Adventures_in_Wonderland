@@ -1650,3 +1650,17 @@ A, B = input().split()
 A = int(A[0]) + int(A[1]) + int(A[2])
 B = int(B[0]) + int(B[1]) + int(B[2])
 print(max(A, B))
+
+
+AtCoder Beginner Contest 187
+
+B - Do you know the second highest mountain?
+
+N = int(input())
+data = []
+for i in range(N):
+    S,T = map(str,input().split())
+    T = int(T)
+    data.append([T,S])
+data.sort(reverse=True)
+print(data[1][1])
