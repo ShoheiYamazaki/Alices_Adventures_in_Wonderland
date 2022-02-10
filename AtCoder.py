@@ -1664,3 +1664,14 @@ for i in range(N):
     data.append([T,S])
 data.sort(reverse=True)
 print(data[1][1])
+
+
+AtCoder Beginner Contest 181
+
+A - Heavy Rotation
+
+N = int(input())
+if N%2==0:
+    print("White")
+else:
+    print("Black")
