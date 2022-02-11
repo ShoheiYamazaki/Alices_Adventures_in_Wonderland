@@ -1675,3 +1675,11 @@ if N%2==0:
     print("White")
 else:
     print("Black")
+
+
+AtCoder Beginner Contest 180
+
+A - box
+
+n, a, b = map(int, input().split())
+print(n-a+b)
