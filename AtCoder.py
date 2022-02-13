@@ -1683,3 +1683,14 @@ A - box
 
 n, a, b = map(int, input().split())
 print(n-a+b)
+
+
+AtCoder Beginner Contest 178
+
+A - Not
+
+x = int(input())
+if x == 0:
+    print(1)
+else:
+    print(0)
