@@ -1705,3 +1705,11 @@ if X >= 30:
     print("Yes")
 else:
     print("No")
+
+
+AtCoder Beginner Contest 172
+
+A - Calc
+
+a = int(input())
+print(a+a**2+a**3)
