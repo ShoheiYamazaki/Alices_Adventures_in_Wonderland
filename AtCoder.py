@@ -1713,3 +1713,11 @@ A - Calc
 
 a = int(input())
 print(a+a**2+a**3)
+
+
+AtCoder Beginner Contest 169
+
+A - Multiplication 1
+
+a, b = map(int, input().split())
+print(a*b)
