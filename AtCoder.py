@@ -1721,3 +1721,14 @@ A - Multiplication 1
 
 a, b = map(int, input().split())
 print(a*b)
+
+
+AtCoder Beginner Contest 164
+
+A - Sheep and Wolves
+
+s, w = map(int, input().split())
+if s <= w:
+    print("unsafe")
+else:
+    print("safe")
