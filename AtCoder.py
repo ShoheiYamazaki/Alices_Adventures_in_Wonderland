@@ -1732,3 +1732,26 @@ if s <= w:
     print("unsafe")
 else:
     print("safe")
+
+
+AtCoder Beginner Contest 239
+
+A - Horizon
+
+import math
+H = int(input())
+print(math.sqrt(H*(12800000+H)))
+
+B - Integer Division
+
+import math
+X = int(input())
+if X >= 9999999999999999:
+    ans = X//10
+    print(math.floor(ans))
+else:
+    ans = X/10
+    print(math.floor(ans))
+
+C - Knight Fork
+
