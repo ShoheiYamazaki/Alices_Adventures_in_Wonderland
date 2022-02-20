@@ -1755,3 +1755,45 @@ else:
 
 C - Knight Fork
 
+
+AtCoder Beginner Contest 240
+
+A - Edge Checker
+
+a, b = map(int, input().split())
+if a - b == 1:
+    print("Yes")
+elif b - a == 1:
+    print("Yes")
+elif a == 1 and b == 10:
+    print("Yes")
+elif a == 10 and b == 1:
+    print("Yes")
+else:
+    print("No")
+
+B - Count Distinct Integers
+
+N = int(input())
+a = set(input().split())
+print(len(a))
+
+C - Jumping Takahashi
+
+N, X = map(int, input().split())
+ab = []
+for i in range(N):
+    a,b = map(int,input().split())
+    ab.append([a,b])
+XX = 0
+count = 0
+for i in range(N):
+    for j in range(0,1):
+        XX += ab[i][j]
+        count += 1
+        print(XX)
+    if count == N:
+        if XX == X:
+            print("Yes")
+        else:
+            print("No")
