@@ -1233,3 +1233,32 @@ int main() {
         cout << "Hello rep2: " << i << endl;
     }
 }
+
+
+AtCoder Beginner Contest 220
+
+C - Long Sequence
+
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+using ll = long long;
+int main() {
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    rep(i,n) cin >> a[i];
+    ll x;
+    cin >> x;
+    ll s = 0;
+    rep(i,n) s += a[i];
+    ll p = x/s;
+    ll ans = p*n;
+    ll now = p*s;
+    rep(i,n) {
+        now += a[i];
+        ans++;
+        if (now > x) break;
+    }
+    cout << ans << endl;
+}
