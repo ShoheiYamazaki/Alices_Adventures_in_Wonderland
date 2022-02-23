@@ -1797,3 +1797,14 @@ for i in range(N):
             print("Yes")
         else:
             print("No")
+
+
+AtCoder Beginner Contest 166
+
+A - A?C
+
+S = input()
+if S == "ABC":
+    print("ARC")
+else:
+    print("ABC")
