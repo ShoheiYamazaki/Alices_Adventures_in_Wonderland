@@ -1808,3 +1808,14 @@ if S == "ABC":
     print("ARC")
 else:
     print("ABC")
+
+
+AtCoder Beginner Contest 160
+
+A - Coffee
+
+S = list(input())
+if S[2] == S[3] and S[4] == S[5]:
+    print('Yes')
+else:
+    print('No')
