@@ -1835,3 +1835,16 @@ input()
 A = Counter(input().split())
 B = Counter(input().split())
 print("No" if B - A else "Yes")
+
+
+AtCoder Beginner Contest 242
+
+A - T-shirt
+
+A, B, C, X = map(int, input().split())
+if X <= A:
+    print(1)
+elif X <= B:
+    print(C / (B - A))
+else:
+    print(0)
