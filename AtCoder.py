@@ -1821,4 +1821,17 @@ else:
     print('No')
 
 
-test
+AtCoder Beginner Contest 241
+
+A - Digit Machine
+
+a = list(map(int,input().split()))
+print(a[a[a[0]]])
+
+B - Pasta
+
+from collections import Counter
+input()
+A = Counter(input().split())
+B = Counter(input().split())
+print("No" if B - A else "Yes")

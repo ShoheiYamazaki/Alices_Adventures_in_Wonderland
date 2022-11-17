@@ -1296,3 +1296,67 @@ int main() {
   cout << ans.val() << endl;
   return 0;
 }
+
+
+AtCoder Beginner Contest 241
+
+A - Digit Machine
+
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+signed main(){
+    vector<ll>a(10);
+    for(int i=0;i<=9;i++){
+        cin>>a[i];
+    }
+
+    ll num = 0; //はじめ、画面には 0 が表示されている
+
+    num = a[num]; //ボタンを 1 回押した
+    num = a[num]; //ボタンを 2 回押した
+    num = a[num]; //ボタンを 3 回押した
+
+    cout<<num<<endl;
+
+    return 0;
+}
+
+B - Pasta
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n, m;
+	int a[1000];
+	int b;
+	bool used[1000];
+	bool found,success;
+
+	cin >> n >> m;
+	for (int i = 0; i < n; i++) {
+		cin >> a[i];
+		used[i] = false;
+	}
+
+	success = true;
+	for (int i = 0; i < m; i++) {
+		cin >> b;
+		found = false;
+
+		for (int j = 0; j < n; j++) {
+			if ((a[j] == b)&&(!used[j])) {
+				used[j] = true;
+				found = true;
+				break;
+			}
+		}
+
+		if (!found)success = false;
+	}
+	if (success)cout << "Yes" << endl;
+	else cout << "No" << endl;
+	return 0;
+}
