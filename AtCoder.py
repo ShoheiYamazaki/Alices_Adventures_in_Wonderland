@@ -1868,3 +1868,28 @@ while True:
         print("T")
         exit()
     V-=C
+
+
+AtCoder Beginner Contest 244
+
+A - Last Letter
+
+N = int(input())
+S = list(map(str, input()))
+print(S[N-1])
+
+
+AtCoder Beginner Contest 245
+
+A - Good morning
+
+A,B,C,D = map(int,input().split())
+if A < C:
+    print("Takahashi")
+elif A > C:
+    print("Aoki")
+else:
+    if B <= D:
+        print("Takahashi")
+    elif B > D:
+        print("Aoki")

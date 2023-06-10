@@ -1413,3 +1413,42 @@ int main() {
         V-=C;
     }
 }
+
+
+AtCoder Beginner Contest 244
+
+A - Last Letter
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int N;
+    string S;
+    cin >> N >> S;
+    cout << S.back() << endl;
+}
+
+
+AtCoder Beginner Contest 245
+
+A - Good morning
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int A,B,C,D;
+    cin >> A >> B >> C >> D;
+    if (A < C) {
+        cout << "Takahashi" << endl;
+    } else if (A > C) {
+        cout << "Aoki" << endl;
+    } else {
+        if (B <= D) {
+            cout << "Takahashi" << endl;
+        } else {
+            cout << "Aoki" << endl;
+        }
+    }
+}
