@@ -1915,3 +1915,11 @@ if y1 == y3:
 if y2 == y3:
     yans = y1
 print(xans, yans)
+
+
+AtCoder Beginner Contest 247
+
+A - Move Right
+
+s = input()
+print('0'+s[:3])
