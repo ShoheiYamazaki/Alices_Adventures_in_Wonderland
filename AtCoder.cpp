@@ -1503,3 +1503,26 @@ int main() {
 
     return 0;
 }
+
+
+AtCoder Beginner Contest 248
+
+A - Lacked Number
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string S;
+    cin >> S;
+
+    set<char> digits_set = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+
+    for (char digit: S){
+        digits_set.erase(digit);
+    }
+
+    char missing_digit = *digits_set.begin();
+
+    cout << missing_digit << endl;
+}

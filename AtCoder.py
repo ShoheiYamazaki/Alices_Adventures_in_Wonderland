@@ -1923,3 +1923,17 @@ A - Move Right
 
 s = input()
 print('0'+s[:3])
+
+
+AtCoder Beginner Contest 248
+
+A - Lacked Number
+
+S = input()
+
+digits_set = set("0123456789")
+
+for digit in S:
+    digits_set.discard(digit)
+
+print(digits_set.pop())
