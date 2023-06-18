@@ -1937,3 +1937,87 @@ for digit in S:
     digits_set.discard(digit)
 
 print(digits_set.pop())
+
+
+AtCoder Beginner Contest 249
+
+A - Jogging
+
+A,B,C,D,E,F,X = map(int,input().split())
+
+takahashi_distance = 0
+time = 0
+while time < X:
+    if time % (A + C) < A:
+        takahashi_distance += B
+    time += 1
+
+aoki_distance = 0
+time = 0
+while time < X:
+    if time % (D + F) < D:
+        aoki_distance += E
+    time += 1
+
+if takahashi_distance > aoki_distance:
+    print("Takahashi")
+elif takahashi_distance < aoki_distance:
+    print("Aoki")
+else:
+    print("Draw")
+
+
+AtCoder Beginner Contest 250
+
+A - Adjacent Squares
+
+H,W = map(int,input().split())
+R,C = map(int,input().split())
+
+ans = 0
+
+if R + 1 <= H:
+    ans += 1
+if R - 1 >= 1:
+    ans += 1
+if C + 1 <= W:
+    ans += 1
+if C - 1 >= 1:
+    ans += 1
+
+print(ans)
+
+
+AtCoder Beginner Contest 251
+
+A - Six Characters
+
+S = input()
+SS = ""
+
+while len(SS) < 6:
+    SS += S
+
+print(SS)
+
+
+AtCoder Beginner Contest 252
+
+A - ASCII code
+
+N = int(input())
+print(chr(N))
+
+
+AtCoder Beginner Contest 253
+
+A - Median?
+
+a,b,c = map(int,input().split())
+
+if a <= b and b <= c:
+    print("Yes")
+elif a >= b and b >= c:
+    print("Yes")
+else:
+    print("No")

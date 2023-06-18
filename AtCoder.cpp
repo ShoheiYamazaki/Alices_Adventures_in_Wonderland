@@ -1526,3 +1526,126 @@ int main() {
 
     cout << missing_digit << endl;
 }
+
+
+AtCoder Beginner Contest 249
+
+A - Jogging
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int A,B,C,D,E,F,X;
+    cin >> A >> B >> C >> D >> E >> F >> X;
+
+    int takahashi_distance = 0;
+    int time = 0;
+    while (time < X) {
+        if (time % (A + C) < A) {
+            takahashi_distance += B;
+        }
+        time += 1;
+    }
+
+    int aoki_distance = 0;
+    time = 0;
+    while (time < X) {
+        if (time % (D + F) < D) {
+            aoki_distance += E;
+        }
+        time += 1;
+    }
+
+    if (takahashi_distance > aoki_distance) {
+        cout << "Takahashi" << endl;
+    } else if (takahashi_distance < aoki_distance) {
+        cout << "Aoki" << endl;
+    } else {
+        cout << "Draw" << endl;
+    }
+}
+
+
+AtCoder Beginner Contest 250
+
+A - Adjacent Squares
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int H, W;
+    cin >> H >> W;
+
+    int R, C;
+    cin >> R >> C;
+
+    int ans = 0;
+
+    if (R + 1 <= H)
+        ans += 1;
+    if (R - 1 >= 1)
+        ans += 1;
+    if (C + 1 <= W)
+        ans += 1;
+    if (C - 1 >= 1)
+        ans += 1;
+
+    cout << ans << endl;
+
+    return 0;
+}
+
+
+AtCoder Beginner Contest 251
+
+A - Six Characters
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string S, SS;
+    cin >> S;
+    SS = "";
+
+    while (SS.length() < 6) {
+        SS += S;
+    }
+
+    cout << SS << endl;
+}
+
+
+AtCoder Beginner Contest 252
+
+A - ASCII code
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+    cout << (char)N << endl;
+}
+
+
+AtCoder Beginner Contest 253
+
+A - Median?
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int a,b,c;
+    cin >> a >> b >> c;
+
+    if ((a <= b && b <= c) || (a >= b && b >= c)) {
+        cout << "Yes" << endl;
+    } else {
+        cout << "No" << endl;
+    }
+}
