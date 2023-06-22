@@ -1649,3 +1649,51 @@ int main() {
         cout << "No" << endl;
     }
 }
+
+
+AtCoder Beginner Contest 306
+
+A - Echo
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+    
+    string S;
+    cin >> S;
+
+    string strS;
+
+    for (int i = 0; i < N; i++) {
+        strS += S[i];
+        strS += S[i];
+    }
+
+    cout << strS << endl;
+}
+
+B - Base 2
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> A(64);
+    for (int i = 0; i < 64; i++) {
+        cin >> A[i];
+    }
+
+    unsigned long long ans = 0;
+
+    for (int i = 0; i < 64; i++) {
+        ans += A[i] * (1LL << i);
+    }
+
+    cout << ans << endl;
+}
+
+C - Centers
+

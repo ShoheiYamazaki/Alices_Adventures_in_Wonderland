@@ -2021,3 +2021,32 @@ elif a >= b and b >= c:
     print("Yes")
 else:
     print("No")
+
+
+AtCoder Beginner Contest 306
+
+A - Echo
+
+N = int(input())
+S = input()
+listS = list(S)
+
+for i in range(N):
+    listS[i] *= 2
+
+strS = "".join(listS)
+print(strS)
+
+B - Base 2
+
+A = list(map(int,input().split()))
+
+ans = 0
+
+for i in range(64):
+    ans += A[i] * 2 ** i
+
+print(ans)
+
+C - Centers
+
