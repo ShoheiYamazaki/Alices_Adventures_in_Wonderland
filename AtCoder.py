@@ -2050,3 +2050,12 @@ print(ans)
 
 C - Centers
 
+n = int(input())
+a = list(map(int, input().split()))
+cnt = [0 for _ in range(n+1)]
+ans = []
+for i in a:
+    cnt[i] += 1
+    if cnt[i] == 2:
+        ans.append(i)
+print(*ans)

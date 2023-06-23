@@ -1697,3 +1697,24 @@ int main() {
 
 C - Centers
 
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+    int n;
+    cin >> n;
+    int n3 = n*3;
+    vector<int> a(n3);
+    rep(i,n3) cin >> a[i];
+
+    vector<int> cnt(n+1);
+    vector<int> ans;
+    rep(i,n3) {
+        cnt[a[i]]++;
+        if (cnt[a[i]] == 2) ans.push_back(a[i]);
+    }
+
+    rep(i,n) cout << ans[i] << ' ';
+    cout << endl;
+}
