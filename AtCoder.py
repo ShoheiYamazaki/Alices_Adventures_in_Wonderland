@@ -2059,3 +2059,46 @@ for i in a:
     if cnt[i] == 2:
         ans.append(i)
 print(*ans)
+
+
+AtCoder Beginner Contest 307
+
+A - Weekly Records
+
+N = int(input())
+A = list(map(int, input().split()))
+ans = 0
+cnt = 0
+records = []
+
+for i in A:
+    ans += i
+    cnt += 1
+    if cnt % 7 == 0:
+        records.append(ans)
+        ans = 0
+print(*records)
+
+B - racecar
+
+n = int(input())
+s = [input() for i in range(n)]
+flg = False
+
+for i in range(len(s)):
+    for j in range(len(s)):
+        if i == j:
+            continue
+        ss = s[i] + s[j]
+        if ss == ss[::-1]:
+            print("Yes")
+            flg = True
+            break
+    else:
+        continue
+    break
+if flg == False:
+    print("No")
+
+C - Ideal Sheet
+
