@@ -2099,6 +2099,3 @@ for i in range(len(s)):
     break
 if flg == False:
     print("No")
-
-C - Ideal Sheet
-

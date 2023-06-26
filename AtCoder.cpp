@@ -1718,3 +1718,78 @@ int main() {
     rep(i,n) cout << ans[i] << ' ';
     cout << endl;
 }
+
+
+AtCoder Beginner Contest 305
+
+C - Snuke the Cookie Picker
+
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+    int h, w;
+    cin >> h >> w;
+    vector<string> s(h);
+    rep(i,h) cin >> s[i];
+
+    int li = h,lj = w,ri = 0,rj = 0;
+    rep(i,h)rep(j,w) {
+        if (s[i][j] == '#') {
+            li = min(li,i);
+            lj = min(lj,j);
+            ri = max(ri,i);
+            rj = max(rj,j);
+        }
+    }
+
+    for (int i = li; i <= ri; i++) {
+        for (int j = lj; j <= rj; j++) {
+            if (s[i][j] == '.') {
+                cout << i + 1 << ' ' << j + 1 << endl;
+            }
+        }
+    }
+}
+
+
+AtCoder Beginner Contest 304
+
+C - Virus
+// BFSを使った回答
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+    int n, d;
+    cin >> n >> d;
+    vector<int> x(n), y(n);
+    rep(i,n) cin >> x[i] >> y[i];
+
+    auto near = [&](int a, int b) {
+        int dx = x[a] - x[b];
+        int dy = y[a] - y[b];
+        return dx*dx + dy*dy <= d*d;
+    };
+
+    queue<int> q;
+    vector<bool> ans(n);
+    ans[0] = true; q.push(0);
+    while (!(q.empty())) {
+        int v = q.front(); q.pop();
+        rep(u,n) {
+            if (near(v,u)) {
+                if (ans[u]) continue;
+                ans[u] = true;
+                q.push(u);
+            }
+        }
+    }
+
+    rep(i,n) {
+        if (ans[i]) cout << "Yes" << endl;
+        else cout << "No" << endl;
+    }
+}
