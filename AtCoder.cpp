@@ -1793,3 +1793,47 @@ int main() {
         else cout << "No" << endl;
     }
 }
+
+
+AtCoder Beginner Contest 303
+
+C - Dash
+
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+using P = pair<int,int>;
+
+int main() {
+    int n, m, h, k;
+    cin >> n >> m >> h >> k;
+    string s;
+    cin >> s;
+    
+    set<P> ps;
+    rep(i,m) {
+        int x, y;
+        cin >> x >> y;
+        ps.emplace(x,y);
+    }
+
+    int x = 0, y = 0;
+    rep(i,n){
+        if (s[i] == 'R') x++;
+        if (s[i] == 'L') x--;
+        if (s[i] == 'U') y++;
+        if (s[i] == 'D') y--;
+        h--;
+        if (h < 0) {
+            cout << "No" << endl;
+            return 0;
+        }
+        if (ps.count(P(x,y))) {
+            if (h < k) {
+                h = k;
+                ps.erase(P(x,y));
+            }
+        }
+    }
+    cout << "Yes" << endl;
+}
