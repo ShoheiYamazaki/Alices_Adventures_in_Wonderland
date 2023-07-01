@@ -2099,3 +2099,76 @@ for i in range(len(s)):
     break
 if flg == False:
     print("No")
+
+
+AtCoder Beginner Contest 308
+
+A - New Scheme
+
+s = list(map(int,input().split()))
+flg = True
+
+for i in range(len(s)-1):
+    if s[i] > s[i+1]:
+        print("No")
+        flg = False
+        break
+
+if flg == True:
+    for i in range(len(s)):
+        if s[i] < 100 or 675 < s[i]:
+            print("No")
+            flg = False
+            break
+
+if flg == True:
+    for i in range(len(s)):
+        if s[i] % 25 != 0:
+            print("No")
+            flg = False
+            break
+
+if flg == True:
+    print("Yes")
+
+B - Default Price
+
+n,m = map(int,input().split())
+c = list(map(str,input().split()))
+d = list(map(str,input().split()))
+p = list(map(int,input().split()))
+ans = 0
+
+for i in range(n):
+    if c[i] in d:
+        ans += p[d.index(c[i])+1]
+    else: ans += p[0]
+
+print(ans)
+
+C - Standings
+
+n = int(input())
+ab = [map(int, input().split()) for _ in range(n)]
+a, b = [list(i) for i in zip(*ab)]
+rate = {}
+
+for i in range(n):
+    rate[i] = a[i] / (a[i] + b[i])
+
+sortedRate = sorted(rate.items(), key=lambda x:x[1])
+
+print(sortedRate)
+
+#辞書じゃないのか？
+
+n = int(input())
+ab = [map(int, input().split()) for _ in range(n)]
+a, b = [list(i) for i in zip(*ab)]
+rate = [0] * n
+rank = []
+
+for i in range(n):
+    rate[i] = a[i] / (a[i] + b[i])
+    for j in range(n):
+        rank = j
