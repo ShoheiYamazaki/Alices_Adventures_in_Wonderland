@@ -1965,3 +1965,35 @@ int main() {
     for (int i = 1; i <= n; i++) cout << ans[i] << ' ';
     cout << endl;
 }
+
+
+AtCoder Beginner Contest 299
+// 軽めの実装
+C - Dango
+
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+    int n;
+    string s;
+    cin >> n >> s;
+    
+    int cnt = 0;
+    int ans = -1;
+
+    rep(i,n) {
+        if (s[i] == 'o') cnt++;
+        else {
+            if(cnt > 0) ans = max(ans,cnt);
+            cnt = 0;
+        }
+    }
+    if (cnt > 0) {
+        if (n-cnt-1 >= 0 && s[n-cnt-1] == '-') {
+            ans = max(ans,cnt);
+        }
+    }
+    cout << ans << endl;
+}
