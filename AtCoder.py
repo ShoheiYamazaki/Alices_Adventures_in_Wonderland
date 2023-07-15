@@ -2172,3 +2172,52 @@ for i in range(n):
     rate[i] = a[i] / (a[i] + b[i])
     for j in range(n):
         rank = j
+
+
+AtCoder Beginner Contest 310
+
+A - Order Something Else
+
+n,p,q = map(int,input().split())
+d = list(map(int,input().split()))
+
+cost1 = p
+cost2 = q + min(d)
+
+print(min(cost1,cost2))
+
+B - Strictly Superior
+
+n,m = map(int,input().split())
+pcf = [input().split() for l in range(n)]
+
+for i in range(n):
+    if pcf()
+
+C - Reversible
+
+n = int(input())
+s = [str(input()) for i in range(n)]
+cnt = len(s)
+
+for i in range(n):
+    for j in range(n):
+        if s[i] == s[j]:
+            cnt -= 1
+        if s[i] == s[j][::-1]:
+            cnt -= 1
+
+print(cnt)
+
+n = int(input())
+s = {str(input()) for i in range(n)}
+cnt = len(s)
+listS = list(s)
+
+for i in range(n):
+    for j in range(n):
+        if listS[i] == listS[j][::-1]:
+            cnt -= 1
+            break
+
+print(cnt)

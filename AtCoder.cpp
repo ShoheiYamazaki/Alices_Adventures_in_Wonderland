@@ -1997,3 +1997,25 @@ int main() {
     }
     cout << ans << endl;
 }
+
+
+AtCoder Beginner Contest 310
+
+C - Reversible
+
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+
+int main() {
+    int n;
+    cin >> n;
+    vector<string> s(n);
+    rep(i,n) cin >> s[i];
+    int cnt = sizeof(s);
+
+    rep(i,n) {
+        if (s[i] == s[i+1]) cnt--;
+    }
+    cout << cnt << endl;
+}
