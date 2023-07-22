@@ -2221,3 +2221,47 @@ for i in range(n):
             break
 
 print(cnt)
+
+
+AtCoder Beginner Contest 311
+
+A - First ABC
+
+n = int(input())
+s = input()
+a = False
+b = False
+c = False
+cnt = 0
+
+for i in range(n):
+    cnt += 1
+    if s[i] == "A":
+        a = True
+    if s[i] == "B":
+        b = True     
+    if s[i] == "C":
+        c = True
+    if a == b == c == True:
+        break
+
+print(cnt)
+
+B - Vacation Together
+
+n,d = map(int,input().split())
+s = [""] * n
+for i in range(n):
+    s[i] = list(input())
+cnt = 0
+ans = 0
+
+for i in range (d):
+    for j in range(n):
+        if s[j][i] == "o":
+            cnt += 1
+    if cnt == n:
+        ans += 1
+    cnt = 0
+    
+print(ans)
